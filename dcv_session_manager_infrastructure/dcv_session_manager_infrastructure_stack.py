@@ -30,8 +30,6 @@ from aws_cdk import (
 from aws_cdk.core import CustomResource
 
 # Class used to build the infrastructure
-
-
 class DcvSessionManagerInfrastructureStack(core.Stack):
 
     def __init__(self, scope: core.Construct, construct_id: str, config: list, **kwargs) -> None:
@@ -414,7 +412,7 @@ class DcvSessionManagerInfrastructureStack(core.Stack):
         lambda_cert = _lambda.Function(self, "lambda_create_cert",
                                            runtime=_lambda.Runtime.PYTHON_3_7,
                                            handler="cert.lambda_handler",
-                                           code=_lambda.Code.asset("./lambda"),
+                                           code=_lambda.Code.from_asset("./lambda"),
                                            timeout=core.Duration.seconds(600),
                                            role=lambda_role)
 

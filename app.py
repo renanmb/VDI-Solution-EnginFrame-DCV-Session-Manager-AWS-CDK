@@ -20,8 +20,8 @@ from dcv_session_manager_infrastructure.dcv_session_manager_infrastructure_stack
 
 
 CONFIG = {
-   "region": "<region>", #AWS Region
-   "account": "<account>", #AWS account number
+   "region": "region", #AWS Region
+   "account": "account", #AWS account number
    "ec2_type_enginframe": "t2.2xlarge", #EnginFrame instance type  
    "ec2_type_dcv_linux": "g4dn.xlarge", #DCV Linux instance type (x86 instances only) 
    "ec2_type_dcv_windows": "g4dn.xlarge", #DCV Windows instance type (x86 instances only)
